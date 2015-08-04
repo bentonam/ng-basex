@@ -1,0 +1,58 @@
+<!doctype html>
+<html class="no-js" lang="" ng-app="exampleApp">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="../src/ng-basex.js"></script>
+	<script src="js/app.js"></script>
+</head>
+<body ng-controller="AppCtrl">
+<div class="row padding">
+	<form class="form-horizontal col-md-5 col-md-offset-1">
+		<legend>BaseX Example</legend>
+		<p>Type a number below to see the generated BaseX value.</p>
+		<div class="form-group">
+			<label for="demo">Input Number</label>
+			<input id="demo" name="demo" type="number" class="form-control" required ng-model="input" ng-change="encodeIt()">
+			<p class="help-block">The number to BaseX encode</p>
+		</div>
+		<div class="form-group">
+			<label for="dictionary">Dictionary</label>
+			<select id="dictionary" name="dictionary" class="form-control" ng-model="dictionary" ng-change="encodeIt()">
+				<option ng-repeat="(key, value) in dictionaries" value="{{key}}" ng-selected="key == dictionary">{{key}}</option>
+			</select>
+			<p class="help-block">The dictionary to use for the encoding</p>
+		</div>
+		<div class="form-group">
+			<label for="padding">Padding</label>
+			<input id="padding" name="padding" type="number" class="form-control" required ng-model="padding" ng-change="encodeIt()">
+			<p class="help-block">The minimum length that the encoded string should be</p>
+		</div>
+		<div class="form-group">
+			<label for="encoded">Encoded Value: </label>
+			<input id="encoded" name="encoded" type="text" class="form-control" value="{{encoded}}" readonly>
+		</div>
+		<div class="form-group">
+			<label for="decoded">Decoded Value: </label>
+			<input id="decoded" name="decoded" type="number" class="form-control" value="{{decoded}}" readonly>
+			<p class="help-block">This should be the same number as your input</p>
+		</div>
+		<div class="form-group">
+			<label for="chars_saved">Chars Saved: </label>
+			<input id="chars_saved" name="chars_saved" type="number" class="form-control" value="{{chars_saved}}" readonly>
+			<p class="help-block">The number of characters saved.</p>
+		</div>
+		<div class="form-group">
+			<label for="decoded">Equality Check: </label>
+			<input id="equality" name="equality" type="text" class="form-control" value="{{equality}}" readonly>
+			<p class="help-block">Whether or not the input is equal to the decoded value</p>
+		</div>
+	</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{
+	"name": "ng-slug",
+	"main": "./dist/ng-basex.js",
+	"version": "0.0.1",
+	"homepage": "https://github.com/bentonam/ng-basex",
+	"authors": [
+		"Aaron Benton"
+	],
+	"description": "Angular JS factory for encoding large numbers into shortened strings based on a pre-defined or custom dictionary.",
+	"moduleType": [
+		"node"
+	],
+	"keywords": [
+		"angularjs",
+		"basex",
+		"base",
+		"encode",
+		"decode",
+		"shrink",
+		"shorten"
+	],
+	"license": "MIT",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
+}
